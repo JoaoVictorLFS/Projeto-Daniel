@@ -1,12 +1,20 @@
+import os
 from pymongo import MongoClient
 from flask import Flask, render_template, url_for, request,redirect,flash
+from dotenv import load_dotenv, dotenv_values
 
-client = MongoClient('mongodb://localhost:27017')
+
+load_dotenv()
+
+db = os.getenv('DB')
+secret_key = os.getenv('SECRET_KEY')
+
+client = MongoClient(db)
 db = client['usuarios']
 colection = db['users']
 
 app = Flask(__name__)
-app.secret_key = '123'
+app.secret_key = secret_key
 
 @app.route('/', methods=['GET'])
 def index():
