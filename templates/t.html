@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Gerenciamento</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      border-bottom: 1px solid #444;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #555;
+      cursor: pointer;
+    }
+
+    .main {
+      flex: 1;
+      background-color: #f0f0f0;
+    }
+
+    .main h1 {
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .main .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li>Dashboard</li>
+        <li>Usuários</li>
+        <li>Produtos</li>
+        <li>Pedidos</li>
+        <li>Relatórios</li>
+        <li>Configurações</li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>Bem-vindo à página de gerenciamento</h1>
+      <div class="content">
+        <!-- Coloque aqui o conteúdo da página -->
+        <p>Esta é uma página de gerenciamento simples usando HTML e CSS.</p>
+        <p>Você pode alterar o layout, as cores, as fontes e os ícones conforme sua preferência.</p>
+        <p>Você também pode adicionar mais funcionalidades usando JavaScript ou outras linguagens.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
