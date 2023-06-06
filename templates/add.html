@@ -1,0 +1,48 @@
+
+    <h1> Cadastro de Veículo</h1>
+    <form action="/create" method="post">
+        <div class="col-md-3">
+            <label> Marca do Veículo</label>
+            <input type="text" name="marca" id="marca" placeholder="marca" class="form-control">
+        </div>
+        <br>
+        <div class="col-md-3">
+            <label> Modelo do Veículo</label>
+            <input type="text" name="modelo" id="modelo" placeholder="modelo" class="form-control">
+        </div>
+        <br>
+        <div class="col-md-3">
+            <label>Preço do Veículo</label>
+            <input type="number" name="preco" id="preco" placeholder="valor do veiculo" class="form-control">
+        </div>
+        <div class="col-md-3">
+            <label>Ano do Veículo</label>
+            <input type="number" name="ano" id="ano" placeholder="ano do veiculo" class="form-control">
+        </div>
+        <br>
+        <div class="col-md-3">
+            <label> Categoria do Veículo</label>
+            <select type="text" name="categoria" id="categoria" >
+                <option value="Sedan">Sedan</option>
+                <option value="Hatch">Hatch</option>
+                <option value="caminhonete">Caminhonete</option>
+                <option value="SUV">SUV</option>
+                <option value="outra">Outra</option>
+            </select>
+        </div>
+        <br>
+        <div class="col-md-3">
+            <label> Tipo de transmissão</label>
+            <select type="text" name="cambio" id="cambio" >
+                <option value="Automatico">Automatico</option>
+                <option value="Manual">Manual</option>
+                <option value="Semiautomatico">Semiautomatico</option>
+                <option value="Autonomo">Autônomo</option>
+            </select>
+        </div>
+        <br>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+        </div>
+    </form>
+</div>
