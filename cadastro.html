@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <style>
+    /* Estilo geral da página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Estilo do container do formulário */
+    .container {
+      width: 50%;
+      margin: 20px auto;
+      background-color: #f8f9fa; /* Fundo levemente cinza claro */
+      border: 1px solid #dee2e6;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    /* Estilo do título do formulário */
+    h1 {
+      text-align: center;
+      color: #343a40;
+      margin-bottom: 20px;
+    }
+
+    /* Estilo dos campos do formulário */
+    .field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    /* Estilo dos labels dos campos */
+    .field label {
+      width: 20%;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    /* Estilo dos inputs dos campos */
+    .field input {
+      width: 80%;
+      height: 40px;
+      border: 1px solid #ced4da;
+      padding: 0 10px;
+      border-radius: 4px;
+    }
+
+    /* Estilo do botão de enviar */
+    .button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .button input {
+      width: 30%;
+      height: 40px;
+      background-color: #343a40;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário de Cadastro</h1>
+    <form action="/cadastro" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nome:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Senha:</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+      </div>
+      <div class="button">
+        <input type="submit" value="Enviar" class="btn btn-dark">
+      </div>
+    </form>
+  </div>
+  
+  <!-- Add Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
