@@ -1,0 +1,103 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+  <style>
+    /* Estilo geral da página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex; /* Adicionei essa propriedade para centralizar o container */
+      justify-content: center; /* Adicionei essa propriedade para centralizar o container horizontalmente */
+      align-items: center; /* Adicionei essa propriedade para centralizar o container verticalmente */
+    }
+
+    /* Estilo do container do formulário */
+    .container {
+      width: 50%;
+      margin: 20px auto;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px #999;
+      padding: 20px;
+    }
+
+    /* Estilo do título do formulário */
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Estilo dos campos do formulário */
+    .field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    /* Estilo dos labels dos campos */
+    .field label {
+      width: 20%;
+      font-weight: bold;
+    }
+
+    /* Estilo dos inputs dos campos */
+    .field input {
+      width: 80%;
+      height: 30px;
+      border: 1px solid #ccc;
+      padding-left: 10px;
+    }
+
+    /* Estilo do botão de enviar */
+    .button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .button input {
+      width: 30%;
+      height: 40px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário de Cadastro</h1>
+    <form action="/cadastro" method="POST">
+      <div class="field">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="button">
+        <input type="submit" value="Enviar">
+      </div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    </form>
+  </div>
+</body>
+</html>
+

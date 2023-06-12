@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  form {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 500px;
+    height: 525px; /* Diminuindo a altura do formulário */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  textarea {
+    border: 1px solid #ccc;
+    resize: none;
+  }
+
+  input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+<h1 align="center" style="font-family: Arial, sans-serif;">📖 Resultado 📖</h1>
+<form action="/home" method="get">
+  <label for="texto">Texto:</label>
+  <textarea id="texto" name="texto" placeholder='' rows="30" cols="65" maxlength="4000"> {{text}} </textarea>
+<input type="submit" value="Voltar"> 
+</form>
+
+</body>
+</html>
