@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Gerenciamento</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Bem-vindo à página de gerenciamento</h1>
+    <div class="mt-4">
+      <div class="mb-3">
+      </div>
+
+      <h2>Gerenciamento de Usuários</h2>
+      <a href="/admin/logout"> <p>Sair</p></a>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td>{{ user._id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <a href="{{ url_for('admin.show_edit_user', user_id=user['_id']|string) }}" class="btn btn-primary">Editar</a>
+              <form action="{{ url_for('admin.delete_user', user_id=user._id) }}" method="post" style="display: inline;">
+                <button type="submit" class="btn btn-danger">Excluir</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
